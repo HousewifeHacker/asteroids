@@ -13,7 +13,8 @@
     var that = this;
     
     window.setInterval((function () {
-      this.moveObjects();
+      // this.moveObjects();
+      this.step();
       this.draw(that.ctx);
     }).bind(that.game), 20);
   };

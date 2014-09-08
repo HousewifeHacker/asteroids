@@ -8,12 +8,15 @@
     <script src="lib/gameView.js"></script>
   </head>
   <body>
-    <canvas id="game-canvas" style="background-color: black"></canvas>
+    <canvas id="game-canvas"
+      style="background-color: black"></canvas>
       
     <script>
       var canvasEl = document.getElementById("game-canvas");
-      canvasEl.height = window.innerHeight;
-      canvasEl.width = window.innerWidth;
+      canvasEl.height = Asteroids.Game.DIM_Y;
+      canvasEl.width = Asteroids.Game.DIM_X;
+      // canvasEl.height = window.innerHeight;
+      // canvasEl.width = window.innerWidth;
       var game = new Asteroids.Game();
       new Asteroids.GameView(game).start();
     </script>
