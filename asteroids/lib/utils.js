@@ -8,8 +8,8 @@
   
   Util.inherits = function(parentClass, childClass) {
     var Surrogate = function() {};
-    Surrogate.prototype = childClass.prototype;
-    parentClass.prototype = new Surrogate();
+    Surrogate.prototype = parentClass.prototype;
+    childClass.prototype = new Surrogate();
   };
   
   //Util.inherits(MovingObject, Asteroid);

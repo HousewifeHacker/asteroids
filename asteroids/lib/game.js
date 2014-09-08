@@ -14,7 +14,7 @@
 
   Game.prototype.addAsteroids = function() {
     while (this.asteroids.length < Game.NUM_ASTEROIDS) {
-      var asteroid = new Asteroids.Asteroid(this.randomPosition());
+      var asteroid = new Asteroids.Asteroid({pos: this.randomPosition()});
       this.asteroids.push(asteroid);
     }
   };
@@ -27,7 +27,7 @@
   };
   
   Game.prototype.draw = function(ctx) {
-    ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);
+    ctx.clearRect(0, 0, Game.DIM_X, Game.DIM_Y);
     this.asteroids.forEach(function(asteroid) {
       asteroid.draw(ctx);
     });

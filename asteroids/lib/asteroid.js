@@ -4,10 +4,10 @@
   }
 
   var Asteroid = Asteroids.Asteroid = function(args) {
-    this.pos = args.pos;
-    this.vel = Asteroids.Util.randomVec(10); // -----what should this 10 be?
-    this.radius = Asteroid.RADIUS;
-    this.color = Asteroid.COLOR;
+    args.radius = Asteroid.RADIUS;
+    args.color = Asteroid.COLOR;
+    args.vel = Asteroids.Util.randomVec(10);
+    Asteroids.MovingObject.call(this, args);
   };
   
   Asteroid.COLOR = "#888888";

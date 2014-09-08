@@ -14,7 +14,7 @@
     
     window.setInterval((function () {
       this.moveObjects();
-      this.draw(ctx);
+      this.draw(that.ctx);
     }).bind(that.game), 20);
   };
 })();

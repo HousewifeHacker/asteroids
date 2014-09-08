@@ -17,7 +17,7 @@
   
   MovingObject.prototype.draw = function(ctx) {
     ctx.fillStyle = this.color;
-    ctx.beingPath();
+    ctx.beginPath();
     
     ctx.arc(
       this.pos[0],
