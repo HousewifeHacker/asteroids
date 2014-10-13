@@ -18,6 +18,11 @@
       this.pos = this.game.wrap(this.pos);
     }
   };
+
+  MovingObject.prototype.addFriction = function() {
+      this.vel[0] *= .998;
+      this.vel[1] *= .998;
+  };
   
   MovingObject.prototype.draw = function(ctx) {
     ctx.fillStyle = this.color;

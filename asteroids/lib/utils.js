@@ -14,9 +14,9 @@
   
   //Util.inherits(MovingObject, Asteroid);
   
-  Util.randomVec = function(length) {
-    var x = Math.floor((0.5 - Math.random()) * 2 * length);
-    var y = Math.floor((0.5 - Math.random()) * 2 * length);
+  Util.randomVec = function(constant) {
+    var x = Math.floor((0.5 - Math.random()) * constant);
+    var y = Math.floor((0.5 - Math.random()) * constant);
     return [x, y];
   };
   

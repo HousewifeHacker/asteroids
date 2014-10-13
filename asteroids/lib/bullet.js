@@ -6,6 +6,7 @@
   var Bullet = Asteroids.Bullet = function(args) {
     args.radius = Bullet.RADIUS;
     args.color = Bullet.COLOR;
+
     //args.vel = [this.game.ship.vel[0] + 10, this.game.ship.vel[1] + 10];
     Asteroids.MovingObject.call(this, args);
   };

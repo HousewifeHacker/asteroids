@@ -30,7 +30,7 @@
   Game.prototype.addBullet = function() {
     var bullet = new Asteroids.Bullet({
       pos: this.ship.pos,
-      vel: [this.ship.vel[0] + 10, this.ship.vel[1] + 10]
+      vel: [this.ship.vel[0] * 1.6, this.ship.vel[1] * 1.6]
     })
     this.bullets.push(bullet);
   }
@@ -59,6 +59,13 @@
       movingObj.move();
     });
   };
+
+  Game.prototype.addFriction = function() {
+    var objects = this.allObjects();
+    objects.forEach(function(movingObj) {
+      movingObj.addFriction();
+    });
+  }; 
   
   Game.prototype.wrap = function(pos) {
     var x = pos[0];
@@ -86,6 +93,7 @@
   Game.prototype.step = function() {
     this.moveObjects();
     this.checkCollisions();
+    this.addFriction();
   };
   
   Game.prototype.remove = function(asteroid) {
