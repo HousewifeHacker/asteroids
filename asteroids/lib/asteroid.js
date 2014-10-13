@@ -20,6 +20,7 @@
       otherObject.relocate();
     } else if (otherObject instanceof Asteroids.Bullet) {
       this.relocate();
+      otherObject.remove();
     }
   };
 

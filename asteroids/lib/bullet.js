@@ -11,8 +11,14 @@
     Asteroids.MovingObject.call(this, args);
   };
 
+  
   Bullet.COLOR = "#F0F8FF";
-  Bullet.RADIUS = 2; // ----what should this radius be?
+  Bullet.RADIUS = 2;
 
   Asteroids.Util.inherits(Asteroids.MovingObject, Bullet);
+
+  Bullet.prototype.remove = function() {
+    this.game.remove(this);
+  };
+
 })();
